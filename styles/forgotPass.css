@@ -1,0 +1,58 @@
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+.formContainer {
+  font-size: 20px;
+}
+
+#email {
+  height: 35px;
+  width: 400px;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+}
+.loginContainer {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+  width: 400px;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  background-color: white;
+  margin-top: 100px;
+}
+#password {
+  height: 35px;
+  width: 400px;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+}
+#confirmInput {
+  height: 35px;
+  width: 400px;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+}
+#cancelButton,
+#submit {
+  border: 1px solid lightgray;
+  height: 35px;
+  width: 180px;
+  background-color: white;
+}
+#cancelButton {
+  color: white;
+  margin-left: 18px;
+  background-color: red;
+}
+#emailError,
+#passwordError,
+#cPassError,
+#accError {
+  color: red;
+  font-size: 15px;
+}

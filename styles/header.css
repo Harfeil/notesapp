@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  flex-direction: row;
+}
+.logo {
+  width: 20%;
+  padding-left: 40px;
+  font-size: 20px;
+}
+#spanLogo {
+  color: #40b5ad;
+}
+.links {
+  margin-top: -20px;
+  margin-left: 65%;
+  width: 80%;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.header h5 {
+  cursor: default;
+  float: left;
+  padding-right: 50px;
+  font-size: 20px;
+}
+.header h5:hover {
+  text-decoration: underline;
+}

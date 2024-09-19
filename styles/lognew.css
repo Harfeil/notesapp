@@ -1,0 +1,60 @@
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+#loginTitle {
+  font-size: 50px;
+}
+.loginContainer {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 50px;
+}
+.loginTitle {
+  text-align: center;
+}
+.nameText,
+.passwordText {
+  height: 45px;
+  width: 400px;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  padding-left: 15px;
+}
+.forgotPass {
+  padding-left: 150px;
+}
+.signInBtn {
+  margin-top: 80px;
+  height: 46px;
+  width: 400px;
+  background-color: #40b5ad;
+  color: white;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+.formContainer label {
+  color: black;
+  font-size: 20px;
+}
+.active {
+  color: blue;
+  text-decoration: underline;
+}
+#passwordError,
+#emailError,
+#messageError,
+#checkError {
+  font-size: 15px;
+  color: red;
+}
+#checkbox {
+  border: 1px solid red;
+}
