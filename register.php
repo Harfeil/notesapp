@@ -113,14 +113,14 @@
 
             $sqlSelect = "SELECT * FROM users WHERE user_email = '$email'";
                   
-            $resultSelect = $connection->query($sqlSelect);
+            $resultSelect = $conn->query($sqlSelect);
 
             if ($resultSelect->num_rows > 0){
                 $errorEmail = "Email is already exist.<br>";
             }else{
                 $hashedpassword = password_hash($password, PASSWORD_DEFAULT);
                 $sql = "INSERT INTO users (user_fname, user_lname, user_age, user_gender, user_email, user_password) VALUES ('$fname' , '$lname','$age', '$gender ', '$email', '$hashedpassword')";
-                $result = $connection->query($sql);
+                $result = $conn->query($sql);
                 $fname = "";
                 $lname = "";
                 $age = "";

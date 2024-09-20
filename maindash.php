@@ -15,9 +15,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
       $sql = "UPDATE note_tbl SET note_name = '$name',note_message = '$message', note_date = '$currentDate' WHERE note_id = '$id'";
 
-        if ($connection->query($sql) === TRUE) {
+        if ($conn->query($sql) === TRUE) {
         } else {
-          $connection->error;
+          $conn->error;
         }
     }
           
@@ -49,9 +49,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
       $sql = "UPDATE note_tbl SET note_status = '$status' WHERE note_id = '$id'";
 
-      if ($connection->query($sql) === TRUE) {
+      if ($conn->query($sql) === TRUE) {
       } else {
-        $connection->error;
+        $conn->error;
       }
     }
 } 
