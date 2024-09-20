@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 session_start();
 
 include "templates/header.php";
@@ -51,6 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if(password_verify($password, $row["user_password"])) {
                 $_SESSION['name'] = $id;
                 header("Location: maindash.php");
+                exit();
             } else {
                 $messageError = "Incorrect Password";
             }
@@ -62,14 +63,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 <link rel="stylesheet" href="styles/lognew.css">
 
-<?php
-
-    if(isset($_SESSION["name"])) {
-      header("Location: mainDash.php");
-      exit();
-    }
-
-?>
 
 <div class = "loginContainer">
     <div class = "loginTitle">
@@ -93,4 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
 </div>
 </body>
+<?php
+ob_end_flush();
+?>
 </html>
