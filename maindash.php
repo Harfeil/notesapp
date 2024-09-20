@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       }
 
       $sql = "INSERT INTO note_tbl (note_name, note_date, note_message, note_status, user_id) VALUES ('$name' , '$currentDate','$message', '$status', '$user_id')";
-      $result = $connection->query($sql);
+      $result = $conn->query($sql);
     }
     
      if (isset($_POST['noteIdStat']) && isset($_POST['status'])){
@@ -132,10 +132,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                   } else {
                     $sql = "SELECT * FROM note_tbl WHERE (note_status = 'New' OR note_status = 'Favorite') AND user_id = '$name'";
                   }
-                  $result = $connection->query($sql);
+                  $result = $conn->query($sql);
 
                   if(!$result){
-                      die("Invalid query: ". $connection->error);
+                      die("Invalid query: ". $conn->error);
                   }
 
                   while($row = $result->fetch_assoc()){
