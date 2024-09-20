@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if($error === false) {
         $sql = "SELECT * FROM users WHERE user_email = '$email'";
-        $result = $connection->query($sql);
+        $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
