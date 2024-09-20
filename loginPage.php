@@ -1,8 +1,9 @@
 <?php
-include "templates/header.php";
-require_once('db_connector.php');
 
 session_start();
+
+include "templates/header.php";
+require_once('db_connector.php');
 
 
 $emailError = "";
@@ -41,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if($error === false) {
         $sql = "SELECT * FROM users WHERE user_email = '$email'";
-        $result = $connection->query($sql);
+        $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
@@ -66,6 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if(isset($_SESSION["name"])) {
       header("Location: mainDash.php");
+      exit();
     }
 
 ?>

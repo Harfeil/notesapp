@@ -1,9 +1,8 @@
-
-
 <?php
-require_once('db_connector.php');
 
 session_start();
+require_once('db_connector.php');
+
 // Check if the user is logged in, if not then redirect to login page
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 

@@ -1,7 +1,7 @@
 <?php
+session_start();
 require_once('db_connector.php');
 
-session_start();
 if(!isset($_SESSION['name'])) {
     header("Location: loginPage.php");
     exit();

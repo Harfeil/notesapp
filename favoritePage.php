@@ -1,7 +1,8 @@
 <?php
-require_once('db_connector.php');
 
 session_start();
+require_once('db_connector.php');
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if(isset($_POST["editNotes"])){
