@@ -48,7 +48,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $row = $result->fetch_assoc();
             $hashedpassword = $row["user_password"];
             $id = $row["user_id"];
-            echo $password;
             if(password_verify($password, $row["user_password"])) {
                 $_SESSION['name'] = $id;
                 header("Location: maindash.php");
