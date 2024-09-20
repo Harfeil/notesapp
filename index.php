@@ -13,15 +13,6 @@ session_destroy();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/newlandcss.css">
     <title>Document</title>
-    <?php
-        if(!isset($_SESSION['name'])) {
-            header("Location: loginPage.php");
-          exit();
-        }
-        if(isset($_SESSION["name"])) {
-        header("Location: mainDash.php");
-        }
-    ?>
 </head>
 <body>
 <?php
