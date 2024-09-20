@@ -64,14 +64,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>Document</title>
 </head>
 <body>
-
-<?php
-
-   if(!isset($_SESSION["name"])) {
-      header("Location: loginpage.php");
-    }
-
-?>
 <div class="dashboardContainer">
     <div class="sidebar">
         <div class="logo">
